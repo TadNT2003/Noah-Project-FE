@@ -4,23 +4,23 @@
   /* Color */
   --color-dark: #000000;
   --color-white: #ffffff;
+  --color-red: #dc2626;
 }
 
 @theme inline {
   /* Color */
-  --color-black: var(#000000);
-  --color-weaker-black: var(#111827);
+  --color-dark: #000000;
+  --color-weaker-dark: #111827;
 
-  --color-gray: var(#4b5563);
-  --color-weaker-gray: var(#6b7280);
-  --color-strong-gray: var(#374151);
+  --color-gray: #4b5563;
+  --color-weaker-gray: #6b7280;
+  --color-stronger-gray: #374151;
 
-  --color-white: var(#ffffff);
-  --color-weaker-white: var(#f3f4f6);
+  --color-weaker-white: #f3f4f6;
 
-  --color-red: var(#dc2626);
-  --color-weaker-red: var(#ef4444);
-  --color-stronger-red: var(#b91c1c);
+  --color-red: #dc2626;
+  --color-weaker-red: #ef4444;
+  --color-stronger-red: #b91c1c;
 
   /* Font */
   --font-inter: var(--font-inter);
@@ -34,6 +34,7 @@
   --spacing-simple200: 0.5rem;
   --spacing-simple250: 0.625rem;
   --spacing-simple300: 0.75rem;
+
   --spacing-simple400: 1rem;
   --spacing-simple600: 1.5rem;
   --spacing-simple800: 2rem;
@@ -47,6 +48,9 @@
 } */
 
 @layer base {
+  * {
+    @apply font-inter;
+  }
   h1 {
     @apply text-5xl font-extrabold text-white;
   }
