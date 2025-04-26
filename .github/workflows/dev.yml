@@ -1,0 +1,39 @@
+name: NOAH frontend development
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+
+  dev-container-build-push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Login Docker Hub
+      uses: docker/login-action@v3.4.0
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+    - name: Setup Docker buildx
+      uses: docker/setup-buildx-action@v3.10.0
+      id: buildx
+
+    - name: Pre-build and push Dev container images
+      uses: devcontainers/ci@v0.3.1900000328
+      id: dev_container_prebuild
+      with:
+        imageName: ${{ secrets.DOCKER_HUB_USERNAME }}/noah_fe_development
+        cacheFrom: ${{ secrets.DOCKER_HUB_USERNAME }}/noah_fe_development
+        push: always
+        runCmd: npm -v
+
+    - name: Verify CI/CD pipeline
+      run: echo ${{ steps.dev_container_prebuild.outputs.runCmdOutput }}
