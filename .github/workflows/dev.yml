@@ -30,8 +30,8 @@ jobs:
       uses: devcontainers/ci@v0.3.1900000328
       id: dev_container_prebuild
       with:
-        imageName: ${{ secrets.DOCKER_HUB_USERNAME }}/noah_fe_development
-        cacheFrom: ${{ secrets.DOCKER_HUB_USERNAME }}/noah_fe_development
+        imageName: ${{ secrets.DOCKERHUB_USERNAME }}/noah_fe_development
+        cacheFrom: ${{ secrets.DOCKERHUB_USERNAME }}/noah_fe_development
         push: always
         runCmd: npm -v
 
