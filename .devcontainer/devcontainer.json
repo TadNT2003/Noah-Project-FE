@@ -1,11 +1,14 @@
 {
   // Dev container name
   "name": "NOAH_FE dev",
-  // Build Dockerfile for dev container
-  "build": {
-    "dockerfile": "Dockerfile",
-    "options": ["--tag=noah_fe_dev:0.0"]
-  },
+  // Build Dockerfile for dev container, uncomment when there is a change in dev environment
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   "options": ["--tag=noah_fe_dev:0.0"]
+  // },
+
+  // Image for dev container
+  "image": "ntdat2003/noah_fe_development",
 
   // Ports inside the container available locally.
   "forwardPorts": [3000],
