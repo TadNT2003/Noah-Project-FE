@@ -4,14 +4,14 @@ import {
   ButtonRedDefault,
   ButtonRedDoc,
   ButtonRedLeftarrow,
-} from "@/components/buttons";
-import ProjectLink from "@/components/projectLink";
+} from "@/components/items/buttons";
+import ProjectLink from "@/components/items/projectLink";
 import { ExternalLink, Moon, Settings } from "lucide-react";
-import TechTag from "@/components/techTag";
-import TechListItem from "@/components/techListItem";
-import { NavItemExpandable, NavItemNone } from "@/components/navItems";
-import { CountrySmallIcons, SmallIcons } from "@/components/smallIcons";
-import SocialLink from "@/components/socialLink";
+import TechTag from "@/components/items/techTag";
+import TechListItem from "@/components/items/techListItem";
+import { NavItemExpandable, NavItemNone } from "@/components/items/navItems";
+import { CountrySmallIcons, SmallIcons } from "@/components/items/smallIcons";
+import SocialLink from "@/components/items/socialLink";
 import { siFacebook, siGithub, siGmail, siX } from "simple-icons";
 
 export default function Test() {
