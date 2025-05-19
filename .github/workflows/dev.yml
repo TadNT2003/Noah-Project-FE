@@ -26,11 +26,14 @@ jobs:
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v3.10.0
         id: buildx
+        with:
+          use: true
 
       - name: Pre-build and push Dev container images
         uses: devcontainers/ci@v0.3.1900000328
         id: dev_container_prebuild
         with:
+          platform: linux/amd64,linux/arm64
           imageName: ${{ secrets.DOCKERHUB_USERNAME }}/noah-frontend
           imageTag: dev-latest
           cacheFrom: ${{ secrets.DOCKERHUB_USERNAME }}/noah-frontend
