@@ -5,7 +5,10 @@ import Image from "next/image";
 
 export default function NoahIntro() {
   return (
-    <section className=" flex flex-col px-side-large pb-section items-center justify-start">
+    <section
+      id="noah-intro"
+      className=" flex flex-col px-side-large pb-section items-center justify-start"
+    >
       <figure>
         <Image
           src="/noah-logo-only-black.png"

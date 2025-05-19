@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NavBarTop from "./navBarTop";
+import NavigationBarHori from "./navigationBarHori";
 import { CountrySmallIcons, SmallIcons } from "../items/smallIcons";
 import { Moon, Settings } from "lucide-react";
 
@@ -16,9 +16,10 @@ export default function Header() {
             className=" object-contain h-full w-full"
           ></Image>
         </figure>
-        <NavBarTop
+        <NavigationBarHori
           navPage={[["Home"], ["About"], ["Projects"], ["Skills"], ["Contact"]]}
-        ></NavBarTop>
+          hrefs={["#home"]}
+        ></NavigationBarHori>
       </div>
       <div className=" flex flex-row items-center w-fit space-x-2.5 px-section">
         <CountrySmallIcons countryCode="GB"></CountrySmallIcons>

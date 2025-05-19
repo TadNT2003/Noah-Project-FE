@@ -1,8 +1,8 @@
 import { siFacebook, siGithub, siGmail, siX } from "simple-icons";
 import H2Tag from "../html/h2Tag";
 import SocialLink from "../items/socialLink";
-import { NavItemNone } from "../items/navItems";
 import PTag from "../html/pTag";
+import NavigationBarHori from "./navigationBarHori";
 
 export default function Footer() {
   return (
@@ -14,13 +14,10 @@ export default function Footer() {
         <SocialLink href="" icon={siX}></SocialLink>
         <SocialLink href="" icon={siGmail}></SocialLink>
       </div>
-      <nav className=" flex flex-row h-fit">
-        <NavItemNone>Home</NavItemNone>
-        <NavItemNone>About</NavItemNone>
-        <NavItemNone>Projects</NavItemNone>
-        <NavItemNone>Skills</NavItemNone>
-        <NavItemNone>Contact</NavItemNone>
-      </nav>
+      <NavigationBarHori
+        navPage={[["Home"], ["About"], ["Projects"], ["Skills"], ["Contact"]]}
+        hrefs={["#home"]}
+      ></NavigationBarHori>
       <PTag className=" text-center">
         @ 2025 Nguyen Thanh Dat. All rights reserved
         <br />
