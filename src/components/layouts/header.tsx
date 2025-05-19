@@ -18,7 +18,7 @@ export default function Header() {
         </figure>
         <NavigationBarHori
           navPage={[["Home"], ["About"], ["Projects"], ["Skills"], ["Contact"]]}
-          hrefs={["#home"]}
+          hrefs={["#home", "#about", "#projects", "#skills", "#contact"]}
         ></NavigationBarHori>
       </div>
       <div className=" flex flex-row items-center w-fit space-x-2.5 px-section">

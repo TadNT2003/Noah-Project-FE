@@ -16,7 +16,7 @@ export default function Footer() {
       </div>
       <NavigationBarHori
         navPage={[["Home"], ["About"], ["Projects"], ["Skills"], ["Contact"]]}
-        hrefs={["#home"]}
+        hrefs={["#home", "#about", "#projects", "#skills", "#contact"]}
       ></NavigationBarHori>
       <PTag className=" text-center">
         @ 2025 Nguyen Thanh Dat. All rights reserved
