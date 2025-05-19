@@ -1,18 +1,20 @@
-import PTag from "@/components/pTag";
-import H1Tag, { H1TagUnderlineRed } from "@/components/h1Tag";
+import PTag from "@/components/html/pTag";
+import H1Tag, { H1TagUnderlineRed } from "@/components/html/h1Tag";
 import {
   ButtonRedDefault,
   ButtonRedDoc,
   ButtonRedLeftarrow,
-} from "@/components/buttons";
-import ProjectLink from "@/components/projectLink";
+} from "@/components/items/buttons";
+import ProjectLink from "@/components/items/projectLink";
 import { ExternalLink, Moon, Settings } from "lucide-react";
-import TechTag from "@/components/techTag";
-import TechListItem from "@/components/techListItem";
-import { NavItemExpandable, NavItemNone } from "@/components/navItems";
-import { CountrySmallIcons, SmallIcons } from "@/components/smallIcons";
-import SocialLink from "@/components/socialLink";
+import TechTag from "@/components/items/techTag";
+import TechListItem from "@/components/items/techListItem";
+import { NavItemExpandable, NavItemNone } from "@/components/items/navItems";
+import { CountrySmallIcons, SmallIcons } from "@/components/items/smallIcons";
+import SocialLink from "@/components/items/socialLink";
 import { siFacebook, siGithub, siGmail, siX } from "simple-icons";
+import Header from "@/components/layouts/header";
+import H2Tag from "@/components/html/h2Tag";
 
 export default function Test() {
   // console.log(siGithub);
@@ -48,6 +50,8 @@ export default function Test() {
         <SocialLink href="" icon={siGmail}></SocialLink>
       </div>
       <H1TagUnderlineRed>Check underline</H1TagUnderlineRed>
+      <Header></Header>
+      <H2Tag>Nguyen Thanh Dat</H2Tag>
     </div>
   );
 }

@@ -54,6 +54,9 @@
   h1 {
     @apply text-5xl font-extrabold text-white;
   }
+  h2 {
+    @apply text-4xl/10 font-semibold text-weaker-red;
+  }
   p {
     @apply text-2xl/8 font-normal text-gray-600;
   }
