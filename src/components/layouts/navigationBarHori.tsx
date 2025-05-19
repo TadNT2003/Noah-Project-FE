@@ -10,7 +10,6 @@ export default function NavigationBarHori({
   return (
     <nav className="flex flex-row items-center h-full">
       {navPage.map((items, index) => {
-        console.log(index);
         return (
           <div key={index} className=" h-full">
             {items.length > 1 ? (
